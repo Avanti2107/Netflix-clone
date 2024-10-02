@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - TV Shows</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: white;
+        }
+        header {
+            background-color: #141414;
+            padding: 20px 4%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #e50914;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+        nav a:hover, nav a.active {
+            color: white;
+        }
+        main {
+            padding-top: 70px;
+        }
+        .genre-dropdown {
+            margin: 20px 4%;
+        }
+        select {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+        .content-section {
+            padding: 20px 4%;
+        }
+        .row-header {
+            font-size: 1.4vw;
+            line-height: 1.3;
+            margin-bottom: 0.5em;
+        }
+        .show-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 0.7vw;
+            padding-bottom: 20px;
+        }
+        .show-card {
+            flex: 0 0 auto;
+            width: 16.66666667%;
+            aspect-ratio: 16 / 9;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .show-card:hover {
+            transform: scale(1.1);
+            z-index: 2;
+        }
+        .show-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .show-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .show-card:hover .show-info {
+            opacity: 1;
+        }
+        .show-title {
+            font-size: 0.9vw;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">NETFLIX</div>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="TVshows.html" class="active">TV Shows</a>
+                <a href="Movies.html">Movies</a>
+                <a href="NewAndPopular.html">New & Popular</a>
+                <a href="MyList.html">My List</a>
+                <a href="Browse.html">Browse by Languages</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="genre-dropdown">
+            <select>
+                <option>Genres</option>
+                <option>Action</option>
+                <option>Comedy</option>
+                <option>Drama</option>
+                <option>Sci-Fi</option>
+                <option>Horror</option>
+            </select>
+        </div>
+
+        <section class="content-section">
+            <h2 class="row-header">Popular on Netflix</h2>
+            <div class="show-row">
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRDeHU2CoPdjJBUlCRUzmIJ7jVfZsIxcQxL-sAjXXdbeH-4_jb7YBmJq3Kkg1x2HGoJH5zWAnJEFuen_fObOWy0KGNRRGH6prCQ.jpg?r=785" alt="Show 1">
+                    <div class="show-info">
+                        <h3 class="show-title">Rampage</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSrqQLcipapgeu0J6lLiNmdXvOSJQ531wDlvCcqgFMgcNz6fwjzH93OC2ozcbPE-NvKPkOB3vQQsZN4x15ZOPAz_eM1M_mw44dOC-JxIyh8bfmGWQp4_1jCSCDzzFfIQNFt6.jpg?r=929" alt="Show 2">
+                    <div class="show-info">
+                        <h3 class="show-title">Badland Hunters</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTedJoNkPYM8Lv-wwyh_LEUab_Yse1U9HTOiKWv8fDuzccTXZ4LtaW-YolGi6FtOZW9liRC_ibdzzNcy1XAu3ce12ne2HCeXPuTa_SGlnrPWZ-V0HmVdrBTiTuBZwqWuByB2.jpg?r=bb7" alt="Show 3">
+                    <div class="show-info">
+                        <h3 class="show-title">MM</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVzWKV3jco7yNOkm6VkA8xd3PG1FfdimV4X9K0OgGEXQIHnLL730wV7I2bVtTwvgrJJcBZiQAaxYt7BlPsdmslSJue_PdPmxu0U.jpg?r=a37" alt="Show 4">
+                    <div class="show-info">
+                        <h3 class="show-title">The Mummy returns</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR871v8B_5W4-2bL3zy0-l1jI1d_kDdYwjnAQXO84kUMxrrbFDunGwXrJN1H_TbQ3qqap3HbzIMjw8HyQuWDGhfgHarGKPtE6JfLZ-awelcRb_ipCja19iEU7yNWXTtp7yvN.jpg?r=347" alt="Show 5">
+                    <div class="show-info">
+                        <h3 class="show-title">Red notice</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="row-header">Trending Now</h2>
+            <div class="show-row">
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcLHruw0VyJXBgZ47oK5YEHHKcfJIVQNagI7lgbWRhPrnbeGa3ZjRNH4-AhpqxMQ05sQw6HaSvXBKcbyAy7EDz398oJ_2Mt1BQU.jpg?r=459" alt="Show 6">
+                    <div class="show-info">
+                        <h3 class="show-title">Merry Christmas</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWZ-IaqV53C5x3dB9K8OHTlPutJwZ6dZV41jKgP_WZIkfCSgV3mQqmvtix7uBc1bdhro8kP_UAAeKxn6wMidmhvamm6ATKaXvxE.jpg?r=4e1" alt="Show 7">
+                    <div class="show-info">
+                        <h3 class="show-title">Leo</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWUT-_Wld0ynY5EgiSmerpgVFZBIRabRa00wN6zWA23XG3yUiwvKZXZ-epTHRnarp2ba5EUKKxm2wuwK3aFANI1-AK5Nhk-ZyyE.jpg?r=fd9" alt="Show 8">
+                    <div class="show-info">
+                        <h3 class="show-title">Irivan</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABS58PNpTUzUJk7K0YFReDWPNwvKFXUPrL-IGNwITBANJlaxWbG7RFqY5UtMW4WS9ZFwDFZoL-d8ombphPYQKzZAtIOJQOmIk5jk.jpg?r=296" alt="Show 9">
+                    <div class="show-info">
+                        <h3 class="show-title">Poochandi</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTN9-3Yd-AFLKSk0xr1kUyu5RdN1gfHN-HSW9-KEzVH8nf4B1BExQeAZfqir9Qqs1hwlE-7KQFQKjczVOEQM-PkR2Dp51HPGRSQ.jpg?r=57e" alt="Show 10">
+                    <div class="show-info">
+                        <h3 class="show-title">Maamannan</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="row-header">Netflix Originals</h2>
+            <div class="show-row">
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSuum9dkZV9db1w6suLLwTRwIFQoi03xJ7OZGU9Y1FsEqwSsnsymo4N1-BKL2YiYjjUs8l8oSMrXX9DbucED_w2nf7M2U0bCmKc.jpg?r=f7c" alt="Show 11">
+                    <div class="show-info">
+                        <h3 class="show-title">Theena Kaadhal</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbo2IzJyrcMRm3h2yK0hKF-CpoHdLvPo9oMrhf_6mGxXnCIAhlkAVQVKjQQMyQJE2iJECNfdmb-ocbusU1_HUigLB4HGrWINnsFu9ltihz-QLToE2eBBkpTdknyF6Vs6vgDJ.jpg?r=ae6" alt="Show 12">
+                    <div class="show-info">
+                        <h3 class="show-title">Murder Mubarak</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSBfQI0pLJHc0LFS5C9Tw9du2uqFrJ9U2W_I0PEkh-YdCeJ3llZlPyRddruMjo63pY6ZnvTt3J8aUmZCNAGPy-goXLPVJnUA66Y.jpg?r=315" alt="Show 13">
+                    <div class="show-info">
+                        <h3 class="show-title">Baade Miya Chote Miya </h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXdseW6oX8Qw5IDoCFVzlqOoZOBZ6v7kkpykqfpJfsyTvUGV5BgSp-U1-oz4z-umy3nUaUdevsEC-Fpy4nIFK7HV941nc1YJDsY.jpg?r=b0a" alt="Show 14">
+                    <div class="show-info">
+                        <h3 class="show-title">Tu Jhooti me makkar</h3>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSAWpsmzXg865M9x3modVD_hH7XJqmjtCVX0Mj9X9YctgouKlLW39k_pQG0S4xQxB-K-iOeoaVbp50K79s6qhT7gfy5n9PH66Lo.jpg?r=885" alt="Show 15">
+                    <div class="show-info">
+                        <h3 class="show-title">HIT</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

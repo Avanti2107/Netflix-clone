@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - My List</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: white;
+        }
+        header {
+            background-color: #141414;
+            padding: 20px 4%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #e50914;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+        nav a:hover, nav a.active {
+            color: white;
+        }
+        main {
+            padding-top: 90px;
+            padding-left: 4%;
+            padding-right: 4%;
+        }
+        h1 {
+            font-size: 2.5vw;
+            margin-bottom: 20px;
+        }
+        .list-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1vw;
+        }
+        .list-item {
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .list-item:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .list-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .item-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .list-item:hover .item-info {
+            opacity: 1;
+        }
+        .item-title {
+            font-size: 0.9vw;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .item-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .play-btn, .remove-btn {
+            background-color: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8vw;
+        }
+        .play-btn:hover, .remove-btn:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">NETFLIX</div>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="TVshows.html">TV Shows</a>
+                <a href="Movies.html">Movies</a>
+                <a href="NewAndPopular.html">New & Popular</a>
+                <a href="Mylist.html" class="active">My List</a>
+                <a href="Browse.html">Browse by Languages</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>My List</h1>
+        <div class="list-container">
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVyuMTVI_Pb4nas7DpoFSlEDmbwaMk5HuaCM0yqOOGNDWoze75tDqxTbrUR718L8PhYhMMGGVvFKSrjxYmML627KZK7JJqWnR20Gwts5LP20yd7C9vqflSG-zIx2_1RQTbElAbZVUSx_U1YkZsHA2u-R5ZqqDKL-Luig3WRijlwSS66k0t2o0mJaUPy52ml5MoJI0A1t1PxF7HKO6VcRv9qizEL3viHKgk2mTTEpQ3ULW1qv-Qi2S28t-MDUoM__oPvewPN07hxsQFyzfDYx7WV0PW_uZF9tI274gqP2VFlRINfJ_j8WnFhoLznlGkR9Ob6_UKNXFgIdK3SVReTBovU.jpg?r=729" alt="Show 1">
+                <div class="item-info">
+                    <h3 class="item-title">Kalki</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABW8Xf2hGyoqV-0utx5DHeA5wwSNYYOxHjk19JMJ8e2hAcQWz2K-Y_ANbHIYA_gY2tb3JgLM2Wot4inato3bDYci2R-SMM-8xuy58drjrqANtoN54SiV-M8ikrNNSqAgDQ53vl3lYhkmlXDKFrd65xGPVoI_owzW_VGI.jpg?r=0a0" alt="Show 2">
+                <div class="item-info">
+                    <h3 class="item-title">Maharaja</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa_zG7wlW6_cCCIMLRRKTJfI7GfKHhYEk5wfQ0YgKHKIXEzrXQgPUg-ES5sQZivZISWDdAeENmtzYo3QL_K8vC_Q94qO3Rlcbd4.jpg?r=033" alt="Show 3">
+                <div class="item-info">
+                    <h3 class="item-title">Lapataa Ladies</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdAOPyGHCSClYSzHl-PjvHbi5dO-ex_LNOEu_RaRw_aC77DnHDjUsi-Qx7OhhD5GFgb-NAPBoJykr3JFU1c_bUxsPkUg2PHWpRY.jpg?r=f0a" alt="Movie 1">
+                <div class="item-info">
+                    <h3 class="item-title">Srikanth</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeYOwt43Qbc_MdUj7_ijb7rWI4t9INWI8Gzlh36Bgd3jlQiNWT3lt2cxKmXfysTMgRfHSbjLbt62U0s9I_W8Lbu-JFZXuG6N0dE.jpg?r=434" alt="Show 4">
+                <div class="item-info">
+                    <h3 class="item-title">Animal</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa04ZxjLCSuOTfhqAgvq1IiOJgOSCMDerqcO0fN2O1CoFbA7QZvaGNdfHjhAaWcDdrPuQEY9q_BpcC2NXvM_sQ2uxzGgbdyzvEFU873attvdY_Tld6ZAplMH6CAucjNNCiow.jpg?r=dc3" alt="Movie 2">
+                <div class="item-info">
+                    <h3 class="item-title">Maharaj</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSaxW7HqP8BldNO2q-jw9IpV0TUDjtjUmhXvK8nKLXcepLsdypyTzzB5QQqNL6Ow8crexz9qWkKeP9lVBcVPC3fb374Gui5CEC8.jpg?r=7dd" alt="Show 5">
+                <div class="item-info">
+                    <h3 class="item-title">Crew</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXPTtOgWR5lvdynrqUQ0Hdew8ZE3EdZq99rYf0ldz0Qn3Lj4yfN9RY866CJ1lp-EN3_2HbVO27ntyuW_PgNpF3IS06gJdtkUS4I.jpg?r=f75" alt="Show 6">
+                <div class="item-info">
+                    <h3 class="item-title">Shaitaan</h3>
+                    <div class="item-actions">
+                        <button class="play-btn">▶ Play</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

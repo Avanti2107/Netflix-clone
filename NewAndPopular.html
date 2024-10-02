@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            color: #e50914;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        h2 {
+            margin: 40px 0 20px;
+        }
+        .row {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+        .poster {
+            flex: 0 0 auto;
+            width: 200px;
+            margin-right: 10px;
+        }
+        .poster img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        .poster img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .poster {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">NETFLIX</div>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="TVshows.html">TV Shows</a>
+                <a href="Movies.html">Movies</a>
+                <a href="NewAndPopular.html">New & Popular</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Trending Now</h2>
+                <div class="row">
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbxgC4PwHefhC1UataUje_dZWkmfylOwd8iMgOoS1Gudi8pppdhn1VJtiOrMR6k3-5BAld1KW0tshN1jkLjEWkTUlZWfHiVJt54IknuMcWIinj4PRNsw3vVal6q6Qb-EJToPsInleu7wCsNQ9-Ykcxr3dFqOXx1ypqt30fpPsStjVkHnAt0qLQmJ2qgJI3War1Kx2jOnxbr0Z-EAlBs8Lt2YaHVSYdBn01tWvpEFA4JOyhk1dRBnoVmOjsHiShv_G4dq_NryBbwZ2nLEYHJcs_usSjk8.jpg?r=21a" alt="7 Khoon Maaf"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSaxW7HqP8BldNO2q-jw9IpV0TUDjtjUmhXvK8nKLXcepLsdypyTzzB5QQqNL6Ow8crexz9qWkKeP9lVBcVPC3fb374Gui5CEC8.jpg?r=7dd" alt="Joker"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfF6DDP9H0k3knc4_Uh2-SECtSrqoG6SQmvrWAmf12GWPRHP--iiQclbKu6xhsdzYz4_BTBj7g3LJWlcOK7P-3AUUNgdeerNUfk.jpg?r=e65" alt="Dune"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcbizvvobKDYX8kPDrbj_h0cMcBSS-XqY7gWLX4DFoqyRoqZe2MsZzPXhNZ-61YPTTvP9UYXkyu6r30aZq59_RM9Xc1RNUklLtmCw4PLxCTPXHcHY-L7YpGQytr6UxOj7PtB.jpg?r=650" alt="Red Coat"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWuNdTi6Z5Lr2PqcHMDv_qn16t1dIZCKYoXItJzMzY2o1w-fStWL9grDSLGamr3k-RlNbgues1YCaNSxbx4y050Mzl3HLLv7a_k.jpg?r=b94" alt="Us"></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Popular on Netflix</h2>
+                <div class="row">
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZQqdlivoNd4qTM_b_y4d7r61BophOTKJxnBR9AUT2yve21VKFyhKEmqK7FskDIFye0OMidH8PptYp0JkM6gn2tToIbmNEtGNBHJsW123wW6tqEILdsXFZhhQ8MlTXl7_IoZ.jpg?r=e6d" alt="Harry Potter"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdSP_TBZRZO7Siqz0q6dXfDELBbkeNN0xBuoz3DqdrZjTZ7TIjyaArksghAUAC2VgpSZZg08ot7a79GcYnWh6aFg303gEMrJHi_Vir552xyQqb8oSuEG0rWBKrS69bnqTtif.jpg?r=5d9" alt="Smile"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaIpVo_W6S7zxXB51shzC3CdcXEMp_UEGcW-jSVL63Aw01T1TAzSlDF6FMZVQnyJsbw2yORZDhKgs-9X9zpb4XkTkSnfsE_lT-Y.jpg?r=837" alt="Unknown Movie"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbgSjigT3nRh6W0EItU_ESd20RPOlL0VEJCQv3HNahEEZIyOan4wMnEQRZKXbI5l6D3fp0hhANsWhvWgF24neKjcaR7xTu9Le8k.jpg?r=9de" alt="Dhvara"></div>
+                    <div class="poster"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABV1D3BFin5nSB90HF5dzTy6n9yHXnyU_YH9t3kdwuUwBHbXoqmtpHKqAfYWOlH2B9p9_EcxFVJkeE0Su0qQMAQLUUUtrIJ6TQpI9IwsVtsLOu6qC7o4eTMt-0M_6ZDKwG3EO.jpg?r=23e" alt="Kalki"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

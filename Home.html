@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: white;
+        }
+        header {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            padding: 20px 4%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #e50914;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: #b3b3b3;
+        }
+        .hero {
+            background-image: url('https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXPTtOgWR5lvdynrqUQ0Hdew8ZE3EdZq99rYf0ldz0Qn3Lj4yfN9RY866CJ1lp-EN3_2HbVO27ntyuW_PgNpF3IS06gJdtkUS4I.jpg?r=f75');
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 4%;
+        }
+        .hero-content {
+            margin-bottom: 10%;
+            max-width: 500px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .btn-play {
+            background-color: white;
+            color: black;
+        }
+        .btn-more {
+            background-color: rgba(109, 109, 110, 0.7);
+            color: white;
+        }
+        .content-section {
+            padding: 20px 4%;
+        }
+        .row-header {
+            font-size: 1.4vw;
+            line-height: 1.3;
+            margin-bottom: 0.5em;
+        }
+        .movie-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 0.7vw;
+            padding-bottom: 30px;
+        }
+        .movie-card {
+            flex: 0 0 auto;
+            aspect-ratio: 16 / 9;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .movie-card:hover {
+            transform: scale(1.1);
+            z-index: 2;
+        }
+        .movie-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">NETFLIX</div>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="TVshows.html">TV Shows</a>
+                <a href="Movies.html">Movies</a>
+                <a href="NewAndPopular.html">New & Popular</a>
+                <a href="Mylist.html">My List</a>
+                <a href="Browse.html">Browse by Languages</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Shaitaan</h1>
+                <p>A family's weekend getaway turns into a nightmare when they let a stranger into their farmhouse. </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-play">▶ Play</button>
+                    <button class="btn btn-more">ⓘ More Info</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="row-header">Continue Watching for User</h2>
+            <div class="movie-row">
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXFUhCrT8LgT5eiNMCSHkOc8rjKXoaviYDFw0S20Ixyf0CDGh832IJvDqvpWxPbqvBVWVrtHszfNRZV10PlJ44tQ6sF_kY4ueq0.jpg?r=5e8" alt="Movie 1"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdUTf9jPHyWLPDm9Sh49KjTXYFvqFBBLMFJzPsNlQfSWFFW4PwgWXRi6ysrozJEec-ZRY4D3JKlZkrP684_mSDKTMvYccmmJqd4.jpg?r=b76" alt="Movie 2"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYbvEKwmncSS7AZJ0IZl_u5s66klNWCDFZzIFWg6Risz_Puz129JhV66vAh6k7DyySjagCuOgRWuWWKs07u4aBYLZZoTNGV6l2s.jpg?r=c9a" alt="Movie 3"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTx7VTJlCzS0jw8GTnaZgIs4WDuqS2-bEkgFZ1x4phEEyrGMSRrLqfsJarQjxwCB3yFyzv1HTbXb1RWWqk7VaeF_nR_m0-XAI5M.jpg?r=804" alt="Movie 4"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABepWyzhxZY55UFXVe1MmM1seH_iIxrOeAP_bSAqxJ-Ib3ksgVlvmBy930JUTDjc0RU3NGFdFDB4GEk1VxdZp2AfL99uBfZ9eLixahRQ4dO1qhAxp27ZxT7YQQDJCZc6Ky-ga.jpg?r=e2c" alt="Movie 5"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZLdDBK55YOjV9JOMjflI67O_sjem_O9YfN0RjOEyIQ5-VnKxfxI9xAoNGCFC8W8pAQmbHAXyJzCT0j0iE74PVGjXcyc388Ku-4.jpg?r=0c9" alt="Movie 6"></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="row-header">Trending Now</h2>
+            <div class="movie-row">
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABW8Xf2hGyoqV-0utx5DHeA5wwSNYYOxHjk19JMJ8e2hAcQWz2K-Y_ANbHIYA_gY2tb3JgLM2Wot4inato3bDYci2R-SMM-8xuy58drjrqANtoN54SiV-M8ikrNNSqAgDQ53vl3lYhkmlXDKFrd65xGPVoI_owzW_VGI.jpg?r=0a0" alt="Movie 7"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa_zG7wlW6_cCCIMLRRKTJfI7GfKHhYEk5wfQ0YgKHKIXEzrXQgPUg-ES5sQZivZISWDdAeENmtzYo3QL_K8vC_Q94qO3Rlcbd4.jpg?r=033" alt="Movie 8"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeYOwt43Qbc_MdUj7_ijb7rWI4t9INWI8Gzlh36Bgd3jlQiNWT3lt2cxKmXfysTMgRfHSbjLbt62U0s9I_W8Lbu-JFZXuG6N0dE.jpg?r=434" alt="Movie 9"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSaxW7HqP8BldNO2q-jw9IpV0TUDjtjUmhXvK8nKLXcepLsdypyTzzB5QQqNL6Ow8crexz9qWkKeP9lVBcVPC3fb374Gui5CEC8.jpg?r=7dd" alt="Movie 10"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSNv8vBdbZE1VZbyZW2DraDMUZeC7lNg8Ukwzcuc1xbhufr2XLtqCcCIARLck4PZ1TNDXaJZRhYQhQ89L0D0Qmj2jZ5hwDxUWN8.jpg?r=7e8" alt="Movie 11"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVonyw0Ni8Ozu689Kryun_ulQIWovWMgisVwwWiXfA4AYOHViw4g2a1OdDSPx7E7bL49pOge9lC2JN8EUOrgvGx7wA2lSKdjxLk.jpg?r=1fc" alt="Movie 12"></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="row-header">New Releases</h2>
+            <div class="movie-row">
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSrqQLcipapgeu0J6lLiNmdXvOSJQ531wDlvCcqgFMgcNz6fwjzH93OC2ozcbPE-NvKPkOB3vQQsZN4x15ZOPAz_eM1M_mw44dOC-JxIyh8bfmGWQp4_1jCSCDzzFfIQNFt6.jpg?r=929" alt="Movie 13"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU6S0zUN4hzkK4YkJGO7tuZxFpunAHg2KK82Dz2DUImm583JRCBfcX8ifvPUvHNsZFw80KvZB-nPJDzqvcchTxfbTtMNXPRw9Ew.jpg?r=6c2" alt="Movie 14"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABV6n6mw36lI1GC14OkfrbPd8OyLSHDOL-qDsyPFWIeeW49KfXkFRXz-Oi2ltNLzmbBBEjwa_di2tAfNC0IA-uphaJQKpa4qrEZw4M2x7-6e0-mu0H0wUeHoZVcQQ3vTZyjQ6.jpg?r=7c8" alt="Movie 15"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdY60JXzU24-WIWGQ8RO4OP19aroOHEPicpE46np29dmmvzEyBL9gZtBTESkJm3cfW-1pcuuHfKCbRw0N_mnmV0VE7AOUUeAuKE.jpg?r=f67" alt="Movie 16"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRbvVtieijHhXFiI0CUjGQ9PlVKzslRpdqfVmJLZJs0eJt5pL7sTogCyeIwKDkyWebLB99PFt5I1xzMaHP12rSrCRrKJsk-iSluf0m8qCgaRiRqUEeZB3TqZUV-nWwDwKf7o.jpg?r=87c" alt="Movie 17"></div>
+                <div class="movie-card"><img src="https://occ-0-2482-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVzWKV3jco7yNOkm6VkA8xd3PG1FfdimV4X9K0OgGEXQIHnLL730wV7I2bVtTwvgrJJcBZiQAaxYt7BlPsdmslSJue_PdPmxu0U.jpg?r=a37" alt="Movie 18"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
